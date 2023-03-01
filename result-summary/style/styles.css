@@ -1,0 +1,207 @@
+/* TODO: 1. TESTING FOR ALL COMMON DEVICES .....
+         2. HOW TO MAKE RESULT CARD SLIGHTLY ON TOP OF THE SUMMARY
+         3. FONT
+         4. SPACING
+         5. AND OTHER MINOR MINOR MISTAKES 
+*/
+
+/* general styles */
+:root {
+    /* primary colors */
+    --Light-red: hsla(0, 100%, 67%, .2);
+    --Orangey-yellow: hsla(39, 100%, 56%, .2);
+    --Green-teal: hsla(166, 100%, 37%, .2);
+    --Cobalt-blue: hsla(234, 85%, 45%, .2);
+
+    /* gradients */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Lightroyal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* main container */
+.container {
+    width: 100vw;
+}
+
+
+/* container with content */
+.container-content {
+    display: grid;
+    height: 480px;
+}
+
+
+/* result card */
+.result {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.result p {
+    color: var(--Light-lavender);
+    width: 300px;
+    text-align: center;
+}
+
+.result h2 {
+    color: var(--White);
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.circle-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-items h2 {
+    font-size: 6rem;
+    margin-bottom: 0;
+
+}
+
+
+/* summary card */
+.summary {
+    margin: 0 35px;
+    z-index: 2;
+
+}
+
+.score-bars {
+    border-radius: 10px;
+    background: var(--Light-red);
+    padding: 3px 10px;
+    margin-bottom: 20px;
+}
+
+.reaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reaction-text {
+    margin-left: 12px;
+    font-weight: 700;
+}
+
+.material-symbols-rounded>.bolt {
+    color: hsl(0, 100%, 67%);
+}
+
+.material-symbols-rounded>.history {
+    color: hsl(39, 100%, 56%);
+}
+
+.material-symbols-rounded>.chat {
+    color: hsl(166, 100%, 37%);
+}
+
+.material-symbols-rounded>.visibility {
+    color: hsl(234, 85%, 45%);
+}
+
+/* button */
+.btn {
+    background: transparent;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 29px;
+    border-radius: 40px;
+    padding: 11px 0;
+    border: none;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+
+    /* main container */
+    .container {
+        margin-top: 120px;
+        width: 50%;
+    }
+
+    /* container with content */
+    .container-content {
+        display: flex;
+        grid-template-columns: 50% max-content;
+        position: relative;
+    }
+
+    /* for all the cards (result and summary) */
+    .child {
+        flex: 20 0 50%;
+    }
+
+    /* result card */
+    .result {
+        border-radius: 30px;
+
+        z-index: 999;
+    }
+
+    /* summary card */
+    .summary {
+        position: relative;
+        z-index: 2;
+        border-radius: 20px;
+        box-shadow: 5px 10px 5px lightblue;
+    }
+
+    .summary h1 {
+        margin-left: 42px;
+    }
+
+    .summary-items {
+        padding: 0 40px;
+    }
+
+    .score-bars {
+        width: 300px;
+    }
+
+}
+

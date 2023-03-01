@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results summary component</title>
+    <!-- style links -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <!-- google icons link -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-content">
+            <!-- result card -->
+            <div class="result child">
+                <p>Your Result</p>
+                <div class="circle">
+                    <div class="circle-items">
+                        <h2>76</h2>
+                        <p>of 100</p>
+                    </div>
+
+                </div>
+                <div class="great">
+                    <h2>Great</h2>
+                    <p>You scored higher than 65% of the people who have taken these tests.</p>
+                </div>
+            </div>
+            <!-- summary card -->
+            <div class="summary child">
+                <h1>Summary</h1>
+                <div class="summary-items">
+                    <div class="score-bars" style="background:var(--Light-red)">
+                        <div class="reaction">
+                            <div class="text-icon">
+                                <span class="material-symbols-rounded">
+                                    <strong class="bolt">bolt</strong>
+                                </span>
+                                <span class="reaction-text" style="color: hsl(0, 100%, 67%);">Reaction</span>
+                            </div>
+                            <p> <strong>80</strong> / 100</p>
+                        </div>
+                    </div>
+                    <div class="score-bars" style="background:var(--Orangey-yellow)">
+                        <div class="reaction">
+                            <div class="text-icon">
+                                <span class="material-symbols-rounded">
+                                    <strong class="history">history_toggle_off</strong>
+                                </span>
+                                <span class="reaction-text" style="color: hsla(39, 100%, 56%);">Memory</span>
+                            </div>
+                            <p> <strong>92</strong> / 100</p>
+                        </div>
+                    </div>
+                    <div class="score-bars" style="background:var(--Green-teal)">
+                        <div class="reaction">
+                            <div class="text-icon">
+                                <span class="material-symbols-rounded">
+                                    <strong class="chat">chat_bubble</strong>
+                                </span>
+                                <span class="reaction-text" style="color: hsla(166, 100%, 37%);">Verbal</span>
+                            </div>
+                            <p> <strong>61</strong> / 100</p>
+                        </div>
+                    </div>
+                    <div class="score-bars" style="background:var(--Cobalt-blue)">
+                        <div class="reaction">
+                            <div class="text-icon">
+                                <span class="material-symbols-rounded">
+                                    <strong class="visibility">visibility</strong>
+                                </span>
+                                <span class="reaction-text" style="color: hsl(234, 85%, 45%);"> Visual</span>
+                            </div>
+                            <p> <strong>72</strong> / 100</p>
+                        </div>
+                    </div>
+                    <button class="btn">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
